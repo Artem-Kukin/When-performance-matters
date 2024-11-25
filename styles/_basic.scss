@@ -1,0 +1,19 @@
+@use "variebles" as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    background: v.$color-blue;
+}
