@@ -1,19 +1,45 @@
-@use "variebles" as v;
+@use "variables" as v;
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    border: none;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  scroll-behavior: smooth;
 }
 
 html {
-    font-size: 62.5%;
-
+  font-size: 62.5%;
 }
 
 body {
-    background: v.$color-blue;
+  background: v.$color_blue;
+  font-family: "Roboto-R";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 2.087%;
 }

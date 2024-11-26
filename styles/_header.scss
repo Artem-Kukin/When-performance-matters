@@ -1,0 +1,87 @@
+@use "variables" as v;
+@use "sass:color";
+@use "mixins" as m;
+@use "placeholders";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: color.adjust(v.$color-white, $alpha: -0.85);
+  backdrop-filter: blur(5px);
+  color: v.$color_white;
+  border: {
+    width: 1px;
+    style: solid;
+  }
+}
+.nav {
+  @include m.d-flex(space-between, stretch);
+  &__title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-link {
+      font-weight: 500;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  &__links {
+    flex-grow: 1;
+
+    .list {
+      font-size: 2.2rem;
+      @include m.d-flex(start);
+      column-gap: 11.2rem;
+    }
+  }
+}
+
+.covid {
+  text-align: center;
+  &__link {
+    font-size: 2.2rem;
+  }
+}
+
+.nav {
+  .covid,
+  &__title,
+  &__links {
+    @include m.d-flex(start, center);
+    padding: 2.087%;
+    border: {
+      right: {
+        width: 1px;
+        style: solid;
+        color: v.$color-white;
+      }
+    }
+  }
+}
+
+.nav__title-link,
+.list__item-link,
+.covid__link {
+  @extend %hover-color-black;
+}
+
+.globe {
+  @include m.d-flex(center, center);
+  width: 90px;
+  padding: 2.087%;
+
+  &__link {
+    &-icon {
+      width: 27px;
+      height: 28px;
+      @extend %hover-color-black-icon;
+    }
+  }
+}
