@@ -7,10 +7,26 @@
     color: v.$color_black;
   }
 }
+%hover-color-white {
+  transition: color v.$animation;
+  &:hover {
+    cursor: pointer;
+    color: v.$color-white;
+  }
+}
 
 %hover-color-black-icon {
   &:hover {
     cursor: pointer;
     stroke: v.$color_black;
+  }
+}
+
+%hover-button {
+  transition: color v.$animation;
+  &:hover {
+    cursor: pointer;
+    color: v.$color_black;
+    background: v.$color_white;
   }
 }

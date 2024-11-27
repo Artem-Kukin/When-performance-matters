@@ -4,6 +4,25 @@
 @use "placeholders";
 
 .header {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 100;
+  // width: 100%;
+  // background: color.adjust(v.$color-white, $alpha: -0.85);
+  // backdrop-filter: blur(5px);
+  // color: v.$color_white;
+  // border: {
+  //   width: 1px;
+  //   style: solid;
+  // }
+  height: 10rem;
+}
+
+
+
+.nav {
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, .2);
   position: fixed;
   top: 0;
   left: 0;
@@ -12,12 +31,13 @@
   background: color.adjust(v.$color-white, $alpha: -0.85);
   backdrop-filter: blur(5px);
   color: v.$color_white;
-  border: {
+  border: 
+  {
     width: 1px;
     style: solid;
+
   }
-}
-.nav {
+
   @include m.d-flex(space-between, stretch);
   &__title {
     font-size: 2.5rem;
@@ -83,5 +103,33 @@
       height: 28px;
       @extend %hover-color-black-icon;
     }
+  }
+}
+
+@media (max-width: 796px) {
+  html {
+    font-size: 50%;
+  }
+  .nav__links .list {
+    column-gap: 3rem;
+  }
+  .nav__links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 583px) {
+  html {
+    font-size: 45.4545%;
+  }
+  .nav__links .list {
+    column-gap: 2.5rem;
+  }
+
+  .globe,
+  .nav .covid,
+  .nav__title,
+  .nav__links {
+    padding-inline: 1.087%;
   }
 }
