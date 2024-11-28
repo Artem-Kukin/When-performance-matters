@@ -1,0 +1,96 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.work-section {
+  padding: 7rem 0 18rem;
+  border-bottom: 1px solid v.$color_white;
+}
+
+.work {
+  // max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-auto-rows: auto;
+  justify-content: center;
+  align-items: stretch;
+  row-gap: clamp(35px, 5vw, 7rem);
+  column-gap: clamp(35px, 13.5vw, 19rem);
+}
+.title_h2 {
+  font-family: "Roboto-L";
+  color: v.$color_white;
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8rem;
+}
+
+.work__card {
+  // height: 100%;
+  max-width: 180px;
+  // width: max-content;
+  min-width: 140px;
+  border-radius: 20px;
+  background: color.adjust(v.$color_white, $alpha: -0.85);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  padding: 2.5rem 1rem 1.5rem;
+  font-size: 16px;
+  @extend %hover-color-white;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+    background: v.$color_blue;
+  }
+  svg {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1.1rem;
+  }
+
+  &--analysis {
+    width: 27.093384px;
+    height: 40.611877px;
+  }
+  &--design {
+    width: 47.386543px;
+    height: 38.732788px;
+  }
+  &--development {
+    width: 50.109924px;
+    height: 31.201416px;
+  }
+  &--maintenance {
+    width: 43px;
+    height: 41px;
+  }
+  &--testing {
+    width: 44px;
+    height: 42px;
+  }
+  &--integration {
+    width: 42px;
+    height: 36px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.125em;
+  }
+  &__text {
+    text-align: center;
+    font-family: "Roboto-L";
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 735px) {
+  .work {
+    grid-template-columns: repeat(2, auto);
+  column-gap: clamp(35px, 8vw, 19rem);
+
+  }
+
+}
