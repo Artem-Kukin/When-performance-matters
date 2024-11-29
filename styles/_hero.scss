@@ -89,8 +89,8 @@
     text-transform: uppercase;
     p {
       font-family: "Roboto-L";
-      position: relative;
-      @include m.d-flex(center, center);
+      // position: relative;
+      // @include m.d-flex(center, center);
       font-size: 1em;
       line-height: 1em;
       text-align: justify;
