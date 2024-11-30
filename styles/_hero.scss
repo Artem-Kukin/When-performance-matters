@@ -27,22 +27,12 @@
       line-height: clamp(7rem, 9vw, 12rem);
       text-transform: uppercase;
     }
-    button {
-      font-family: "Roboto-R";
-      position: absolute;
-      right: -15%;
-      bottom: 5%;
-      text-transform: uppercase;
-      font-size: clamp(16px, 2vw, 2.8rem);
-      background: v.$color_black;
-      color: v.$color_white;
-      padding: 1.25rem;
-      border: {
-        radius: 30px;
-      }
-      @extend %hover-button;
-    }
   }
+  &__btn {
+   position: absolute;
+   right: -15%;
+   bottom: 5%;
+ }
   &__pigeon-cookie {
     grid-column: 2;
     grid-row: 2;
@@ -117,6 +107,21 @@
     transform: translateY(-50%);
     pointer-events: none;
   }
+}
+.btn {
+  font-family: "Roboto-R";
+  // position: absolute;
+  // right: -15%;
+  // bottom: 5%;
+  text-transform: uppercase;
+  font-size: clamp(16px, 2vw, 2.8rem);
+  background: v.$color_black;
+  color: v.$color_white;
+  padding: 1.25rem;
+  border: {
+    radius: 30px;
+  }
+  @extend %hover-button;
 }
 
 @media (max-width: 1061px) {

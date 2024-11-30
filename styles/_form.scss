@@ -1,0 +1,74 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.form-section {
+    position: relative;
+  padding: 5rem 0 14rem;
+  display: block;
+  overflow: hidden;
+  &::before {
+content: "";
+position: absolute;
+top: 0;
+left: -25%;
+// rotate: z 180deg;
+background: url(../images/main/cloud.png);
+background-repeat: no-repeat;
+background-size: contain;
+width: 50%;
+height: 50%;
+}
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+    // rotate: z -360deg;
+    background: url(../images/main/cloud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+}
+      
+}
+
+.title_h5 {
+  font-family: "Roboto-R";
+  color: v.$color_black;
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 3.5rem;
+}
+.form-section__wrapper {
+}
+.form {
+  margin: 0 auto;
+  max-width: 623px;
+  @include m.d-flex(center, stretch, column);
+  row-gap: 2.5rem;
+  input {
+    font-family: "Roboto-L";
+
+    height: 47px;
+    border-radius: 20px;
+    padding: 0.5rem 2.5rem;
+    line-height: 30px;
+    font-size: 2.5rem;
+  }
+  textarea {
+    font-family: "Roboto-L";
+    padding: 0.5rem 2.5rem;
+    height: 47px;
+
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 2.5rem;
+
+    min-height: 47px;
+    max-height: 15rem;
+    border-radius: 20px;
+  }
+}

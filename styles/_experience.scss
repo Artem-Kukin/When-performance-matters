@@ -26,6 +26,17 @@
     border-radius: 20px;
 
     overflow: hidden;
+    transition: all 0.5s ease;
+    &:hover {
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+      background: v.$color_blue;
+      transform: scale(1.1);
+
+      .experience__card__title {
+        background: v.$color_blue;
+    transition: all 0.5s ease;
+      }
+    }
     img {
       width: 100%;
       height: 100%;
@@ -61,6 +72,7 @@
       background: v.$color_white;
       border-radius: 20px;
       rotate: z 10deg;
+      cursor: pointer;
     }
     .arrow {
       width: 35.6px;
@@ -69,6 +81,8 @@
       left: 10%;
       bottom: 8%;
       z-index: 2;
+      cursor: pointer;
+
     }
   }
 }

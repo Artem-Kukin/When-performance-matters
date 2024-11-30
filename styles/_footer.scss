@@ -1,0 +1,39 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.footer-section {
+  height: 136px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.15);
+  border-top: 1px solid v.$color_white;
+}
+
+.footer {
+  margin-top: 42px;
+  @include m.d-flex(space-between, center);
+  &__info {
+    font-size: 16px;
+  @include m.d-flex(flex-start, center, row, wrap, 3.5rem, 1rem);
+  max-width:  260px;
+    &__item {
+      font-size: 1em;
+      color: v.$color_white;
+      cursor: pointer;
+      &:last-child {
+        font-size: 0.875em;
+      }
+    }
+  }
+
+  &__social {
+    &__link {
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      margin-left: 4.4rem;
+    }
+  }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>When performance matters</title>
     <link rel="icon" href="./assets/pigeon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         @font-face {
             font-family: Roboto-B;
@@ -67,7 +68,7 @@
                 <div class="hero">
                     <div class="hero__title">
                         <h1>When performance matters</h1>
-                        <button>Start development with us!</button>
+                        <button class="hero__btn btn">Start development with us!</button>
                     </div>
                     <div class="hero__pigeon-cookie">
                         <div class="pigeon-container">
@@ -225,7 +226,133 @@
                     </div>
                 </div>
         </section>
+        <section class="testimonials-section" id="testimonials">
+            <div class="testimonials">
+                <h2 class="testimonials__title title_h2">Testimonials</h2>
+                <div class="container">
+
+                    <div class="testimonial swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial__card card ">
+                                    <img class="card__background" src="./images/testimonials/background.png">
+                                    <div class="card__inner">
+                                        <div class="card__inner__photo">
+                                            <img src="./images/testimonials/client-1.png" alt="client">
+                                        </div>
+                                        <p>Очень хороший отзыв, который оставил
+                                            довольный клиент.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-section" id="contact">
+            <h5 class="title_h5">Ready to get started? <br>Drop us a line!</h5>
+            <div class="container">
+                <div class="form-section__wrapper">
+                    <form class="form" action="#">
+                        <input class="form__name" type="name" placeholder="Your name">
+                        <input class="form__email" type="email" placeholder="Your email">
+                        <textarea class="form__textarea" placeholder="What we can do for you?"></textarea>
+                        <button class="form__btn btn" type="button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer-section" id="footer">
+        <div class="container">
+            <div class="footer">
+                <div class="footer__info">
+                    <a class="footer__info__item">Terms of Use</a>
+                    <a class="footer__info__item">Privacy Policy</a>
+                    <a class="footer__info__item">© Artem Kukin 2024. All Rights Reserved.</a>
+                </div>
+                <div class="footer__social">
+                    <a class="footer__social__link"><svg style="width: 25px; height: 25px;">
+                            <use href="./assets/sprites.svg#in"></use>
+                        </svg></a>
+                    <a class="footer__social__link"><svg style="width: 25px; height: 25px;">
+                            <use href="./assets/sprites.svg#facebook"></use>
+                        </svg></a>
+                    <a class="footer__social__link"><img style="width: 25px; height: 25px;" src="./images/footer/instagram.svg"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script defer src="./js/index.js"></script>
 </body>
 
 </html>
