@@ -4,35 +4,34 @@
 @use "sass:color";
 
 .form-section {
-    position: relative;
+  position: relative;
   padding: 5rem 0 14rem;
   display: block;
   overflow: hidden;
   &::before {
-content: "";
-position: absolute;
-top: 0;
-left: -25%;
-// rotate: z 180deg;
-background: url(../images/main/cloud.png);
-background-repeat: no-repeat;
-background-size: contain;
-width: 50%;
-height: 50%;
-}
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25%;
+    background: url(../images/main/cloud.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+    z-index: -1;
+  }
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
     right: -25%;
-    // rotate: z -360deg;
     background: url(../images/main/cloud.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
     height: 50%;
-}
-      
+    z-index: -1;
+  }
 }
 
 .title_h5 {
@@ -42,8 +41,7 @@ height: 50%;
   font-size: 3.6rem;
   margin-bottom: 3.5rem;
 }
-.form-section__wrapper {
-}
+
 .form {
   margin: 0 auto;
   max-width: 623px;
@@ -70,5 +68,8 @@ height: 50%;
     min-height: 47px;
     max-height: 15rem;
     border-radius: 20px;
+  }
+  &__btn {
+    height: 47px;
   }
 }

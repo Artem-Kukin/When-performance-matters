@@ -5,7 +5,6 @@
 
 .experience-section {
   padding-top: 5rem;
-//   text-align: center;
 }
 .experience {
   display: flex;
@@ -13,7 +12,6 @@
   flex-wrap: wrap;
   gap: 5rem;
 
-  
   &__card {
     position: relative;
 
@@ -34,7 +32,7 @@
 
       .experience__card__title {
         background: v.$color_blue;
-    transition: all 0.5s ease;
+        transition: all 0.5s ease;
       }
     }
     img {
@@ -82,7 +80,6 @@
       bottom: 8%;
       z-index: 2;
       cursor: pointer;
-
     }
   }
 }

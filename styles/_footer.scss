@@ -13,11 +13,11 @@
 
 .footer {
   margin-top: 42px;
-  @include m.d-flex(space-between, center);
+  @include m.d-flex(center, center, row, wrap, 33%, 1.5rem);
   &__info {
     font-size: 16px;
-  @include m.d-flex(flex-start, center, row, wrap, 3.5rem, 1rem);
-  max-width:  260px;
+    @include m.d-flex(flex-start, center, row, wrap, 3.5rem, 1rem);
+    max-width: 260px;
     &__item {
       font-size: 1em;
       color: v.$color_white;
@@ -29,11 +29,14 @@
   }
 
   &__social {
+    order: -1;
     &__link {
       cursor: pointer;
       width: 25px;
       height: 25px;
-      margin-left: 4.4rem;
+      &:nth-child(n):not(:first-child) {
+        margin-left: 4.4rem;
+      }
     }
   }
 }

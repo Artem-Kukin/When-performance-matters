@@ -124,3 +124,26 @@
     padding-inline: 1.087%;
   }
 }
+
+@media (max-width: 415px) {
+  .nav {
+    flex-wrap: wrap;
+    &__covid-wrapper.covid {
+      display: none;
+    }
+    &__links {
+      border-top: 1px solid v.$color_white;
+      border-right: 0;
+      order: 1;
+      padding-block: 0;
+      transition: padding v.$animation;
+      visibility: hidden;
+      position: absolute;
+      &.open {
+        padding-block: 2.087%;
+        visibility: visible;
+        position: static;
+      }
+    }
+  }
+}

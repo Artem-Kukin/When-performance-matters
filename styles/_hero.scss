@@ -29,10 +29,10 @@
     }
   }
   &__btn {
-   position: absolute;
-   right: -15%;
-   bottom: 5%;
- }
+    position: absolute;
+    right: -15%;
+    bottom: 5%;
+  }
   &__pigeon-cookie {
     grid-column: 2;
     grid-row: 2;
@@ -73,14 +73,10 @@
     background: color.adjust(v.$color-white, $alpha: -0.85);
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    // padding: 1.3rem;
     font-size: 16px;
-    // overflow-y: hidden;
     text-transform: uppercase;
     p {
       font-family: "Roboto-L";
-      // position: relative;
-      // @include m.d-flex(center, center);
       font-size: 1em;
       line-height: 1em;
       text-align: justify;
@@ -109,10 +105,8 @@
   }
 }
 .btn {
+  @include m.d-flex(center, center);
   font-family: "Roboto-R";
-  // position: absolute;
-  // right: -15%;
-  // bottom: 5%;
   text-transform: uppercase;
   font-size: clamp(16px, 2vw, 2.8rem);
   background: v.$color_black;
@@ -136,9 +130,6 @@
       max-width: 100%;
     }
   }
-  //   .hero__pigeon-cookie {
-  //     grid-column: span 2;
-  //   }
 }
 @media (max-width: 700px) {
   .hero__pigeon-cookie {
@@ -155,7 +146,6 @@
       padding: 1.8rem;
     }
     .pigeon-container {
-      // display: contents;
       bottom: -50px;
       img {
         z-index: 1;

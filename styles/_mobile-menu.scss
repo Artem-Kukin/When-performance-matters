@@ -1,0 +1,52 @@
+@use "variables" as v;
+@use "placeholders";
+@use "mixins" as m;
+@use "sass:color";
+
+.fixed-mob-menu {
+  position: relative;
+  width: 50px;
+  height: 37px;
+  display: none;
+  cursor: pointer;
+}
+.mobile-menu {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background: v.$color_white;
+  padding-block: 10px;
+  border-top: 2px solid v.$color_white;
+  border-bottom: 2px solid v.$color_white;
+
+  box-sizing: content-box;
+  background-clip: content-box;
+  transition: all v.$animation;
+}
+
+.mobile-menu.active {
+  padding-block: 0px;
+  border-top: 0;
+  border-bottom: 0;
+  rotate: z 45deg;
+  height: 2px;
+  &::after {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: v.$color_white;
+    rotate: z 90deg;
+  }
+}
+
+@media (max-width: 415px) {
+  .fixed-mob-menu {
+    display: block;
+    margin-top: 1%;
+    margin-right: 6%;
+  }
+}
