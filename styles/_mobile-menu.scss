@@ -4,17 +4,12 @@
 @use "sass:color";
 
 .fixed-mob-menu {
-  position: relative;
   width: 50px;
   height: 37px;
   display: none;
   cursor: pointer;
 }
 .mobile-menu {
-  position: relative;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
   width: 50px;
   height: 2px;
   background: v.$color_white;
@@ -31,21 +26,25 @@
   padding-block: 0px;
   border-top: 0;
   border-bottom: 0;
-  rotate: z 45deg;
+  rotate: z -225deg;
   height: 2px;
+  background: black;
+  border: 1px solid white;
+
   &::after {
     display: block;
     content: "";
     width: 50px;
     height: 2px;
-    background: v.$color_white;
+    background: v.$color_black;
     rotate: z 90deg;
+    border: 1px solid white;
   }
 }
 
 @media (max-width: 415px) {
   .fixed-mob-menu {
-    display: block;
+    @include m.d-flex(center, center);
     margin-top: 1%;
     margin-right: 6%;
   }
